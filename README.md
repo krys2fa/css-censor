@@ -16,15 +16,22 @@ This is a CSS lint tool built as a Microverse Ruby capstone project.
 
 ### Prerequisites
 
-- Command Prompt.
+- Terminal/Command Prompt.
 - CSS stylesheets to run linter on.
 
 ### Setup
 To get a local copy up and running follow these simple example steps.
 
-- Download repository files
-- Change directory into `css-censor` folder
-- Run `./censor`
+- Download repository files.
+- Open up a terminal session.
+- In your terminal, change directory into the `css-censor` folder.
+- Run `./censor` in your terminal.
+
+### Instructions
+
+###### Good Code
+
+##### Bad Code
 
 ## Author
 
