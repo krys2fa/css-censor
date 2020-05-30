@@ -24,8 +24,9 @@ To get a local copy up and running follow these simple example steps.
 
 - Download repository files.
 - Open up a terminal session.
-- In your terminal, change directory into the `css-censor` folder.
-- Run `./censor` in your terminal.
+- In your terminal, change directory into the `css-censor/bin` folder.
+- Run `ln -s $PWD/censor /usr/local/bin` in your terminal and then run `censor` + file to be checked. Eg: `censor main.css`.
+- If the above does not work, just run `./censor` + file to be checked in your terminal. Eg: `./censor main.css`.
 
 ### Instructions
 
