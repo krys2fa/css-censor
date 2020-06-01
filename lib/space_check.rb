@@ -27,6 +27,7 @@ module SpaceCheck
 
       errors << "There should be a space before curly bracket on line #{index + 1}" unless line =~ /[[:space:]]\{/
     end
+    errors
   end
 
   def last_line_check(lines, errors)

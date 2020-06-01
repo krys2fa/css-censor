@@ -5,6 +5,8 @@ describe SpaceCheck do
   let(:check) { Censor.new }
   let(:lines1) { ['#head {', '}', "\n"] }
   let(:lines2) { ['#head {', '}'] }
+  let(:line1) { ['.section {'] }
+  let(:line2) { ['.section{'] }
   let(:errors) { [] }
   describe 'trailing_space_check' do
     it '' do
@@ -17,7 +19,14 @@ describe SpaceCheck do
   end
 
   describe 'space_before_bracket_check' do
-    it '' do
+    it 'should return an empty array if there is a space before the opening bracket' do
+      expect(check.space_before_bracket_check(line1, errors))
+        .to eql([])
+    end
+
+    it 'should return an error message if there is no space before the opening bracket' do
+      expect(check.space_before_bracket_check(line2, errors))
+        .to eql(['There should be a space before curly bracket on line 1'])
     end
   end
 
