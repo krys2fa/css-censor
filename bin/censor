@@ -13,9 +13,8 @@ puts ''
 results = Censor.check(file)
 
 if !results.nil?
-  puts "Checks completed with the following errors: "
+  puts 'Checks completed with the following errors: '
   results.each { |error| puts "#{error}\n" }
 else
-  puts "Checks completed with no errors"
+  puts 'Checks completed with no errors'
 end
-
