@@ -1,13 +1,13 @@
 module SpaceCheck
   # rubocop:disable Metrics/CyclomaticComplexity
-  def self.trailing_space_check(lines, errors)
+  def trailing_space_check(lines, errors)
     lines.each_with_index do |line, index|
       errors << "Trailing space found on line #{index + 1}." if line.end_with?("; \n")
     end
     errors
   end
 
-  def self.indentation_check(lines, errors)
+  def indentation_check(lines, errors)
     lines.each_with_index do |line, index|
       next if line.start_with?('@') || line == "\n" || line.end_with?(",\n")
       next if ['{', '}'].any? { |needle| line.include? needle }
@@ -21,7 +21,7 @@ module SpaceCheck
     errors
   end
 
-  def self.space_before_bracket_check(lines, errors)
+  def space_before_bracket_check(lines, errors)
     lines.each_with_index do |line, index|
       next unless line.include?('{')
 
@@ -29,7 +29,7 @@ module SpaceCheck
     end
   end
 
-  def self.last_line_check(lines, errors)
+  def last_line_check(lines, errors)
     errors << 'Last line in the file should be empty.' unless lines.last.include? "\n"
   end
   # rubocop:enable Metrics/CyclomaticComplexity

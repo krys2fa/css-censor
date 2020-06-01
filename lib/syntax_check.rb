@@ -1,5 +1,5 @@
 module SyntaxCheck
-  def self.missing_semicolon_check(lines, errors)
+  def missing_semicolon_check(lines, errors)
     lines.each_with_index do |line, index|
       next if line.include?('{') || line.include?('}') || line == "\n" || line.end_with?(",\n")
 

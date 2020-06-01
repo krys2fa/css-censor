@@ -11,11 +11,19 @@ puts ''
 file = ARGV[0]
 puts 'Scanning file for possible errors...'
 puts ''
-results = Censor.check(file)
 
-if results.size.positive?
-  puts "Checks completed with the following #{results.size} errors: "
-  results.each { |error| puts '  Error: '.red + "#{error}\n" }
+errors = []
+lines = File.open(file).to_a
+check = Censor.new
+check.last_line_check(lines, errors)
+check.indentation_check(lines, errors)
+check.trailing_space_check(lines, errors)
+check.space_before_bracket_check(lines, errors)
+check.missing_semicolon_check(lines, errors)
+
+if errors.size.positive?
+  puts "Checks completed with the following #{errors.size} errors: "
+  errors.each { |error| puts '  Error: '.red + "#{error}\n" }
 else
   puts 'Checks completed with no errors'.green
 end
