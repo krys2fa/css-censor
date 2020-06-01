@@ -1,2 +1,21 @@
 #!/usr/bin/env ruby
-puts "Hello!"
+require_relative '../lib/censor.rb'
+
+puts '---------------------------------'
+puts '| Welcome to Censor CSS Linter! |'
+puts '---------------------------------'
+puts ''
+puts 'Reading file...'
+puts ''
+file = ARGV[0]
+puts 'Scanning file for possible errors...'
+puts ''
+results = Censor.check(file)
+
+if !results.nil?
+  puts "Checks completed with the following errors: "
+  results.each { |error| puts "#{error}\n" }
+else
+  puts "Checks completed with no errors"
+end
+
