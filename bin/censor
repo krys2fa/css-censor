@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../lib/censor.rb'
+require_relative '../lib/checker.rb'
 require 'colorize'
 
 puts '---------------------------------'
@@ -12,17 +13,7 @@ file = ARGV[0]
 puts 'Scanning file for possible errors...'
 puts ''
 
-errors = []
-lines = File.open(file).to_a
-
-if lines.size.positive?
-  check = Censor.new
-  check.last_line_check(lines, errors)
-  check.indentation_check(lines, errors)
-  check.trailing_space_check(lines, errors)
-  check.space_before_bracket_check(lines, errors)
-  check.missing_semicolon_check(lines, errors)
-end
+errors = Checker.check(file)
 
 if errors.size.positive?
   puts "Checks completed with the following #{errors.size} errors: "
