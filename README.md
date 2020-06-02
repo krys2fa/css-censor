@@ -2,12 +2,21 @@
 This is a CSS lint tool built as a Microverse Ruby capstone project.
 
 ## Built With
-
 - Ruby
+- Colorize gem
+- RSpec
+- GitFlow
+
+## Description
+This linter promotes best CSS practices by checking for:
+  - Unwanted trailing spaces at the end of lines in a file.
+  - Indentation of 2 spaces at the beginning of lines where necessary.
+  - Empty line at the end of the file.
+  - Spaces before opening curly braces.
+  - Missing semi-colon at the end of lines where necessary.
 
 ## Live Demo
-
-[Video Presentation](https://www.loom.com/share/6b13a2f8b35446bb957563af21bd3d4)
+**Click [here](https://www.loom.com/share/6b13a2f8b35446bb957563af21bd3d4) in order to see a Live Demo of this project.**
 
 ## Screenshots
 ### Screenshot of linter passing with no errors
@@ -18,15 +27,12 @@ This is a CSS lint tool built as a Microverse Ruby capstone project.
 
 ## Getting Started
 
-**Click on the link above in order to see the Live Demo of this project.**
-
-
 ### Prerequisites
-
 - Terminal/Command Prompt.
 - CSS stylesheets to run linter on.
 
-### Setup
+### Instructions
+##### Setup
 To get a local copy up and running follow these simple example steps.
 
 - Download repository files.
@@ -38,11 +44,21 @@ To get a local copy up and running follow these simple example steps.
 - Alternatively, you can quickly test this linter by running `censor lib/good_test.css` and/or `censor lib/bad_test.css`.
 -  If you happen to be in the bin folder, run `./censor ../lib/good_test.css` and/or `./censor ../lib/bad_test.css`.
 
-### Instructions
-
-###### Good Code
+## Good and Bad Code Examples
+##### Good Code
+```
+.section {
+  height: 2rem;
+  width: 1rem;
+}
+```
 
 ##### Bad Code
+```
+.section{
+    height: 2rem;
+  width: 1rem;}
+```
 
 ## Author
 
