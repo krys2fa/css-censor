@@ -58,7 +58,7 @@ To get a local copy up and running follow these simple example steps.
 ##### Bad Code
 ```
 .section{
-    height: 2rem;
+    height: 2rem
   width: 1rem;}
 ```
 
