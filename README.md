@@ -16,7 +16,7 @@ This linter promotes best CSS practices by checking for:
   - Missing semi-colon at the end of lines where necessary.
 
 ## Live Demo
-**Click [here](https://www.loom.com/share/6b13a2f8b35446bb957563af21bd3d4) in order to see a Live Demo of this project.**
+**Click [here](https://www.loom.com/share/e3549d092e1f4a51b0d6118888b10424) in order to see a Live Demo of this project.**
 
 ## Screenshots
 ### Screenshot of linter passing with no errors
