@@ -44,6 +44,8 @@ To get a local copy up and running follow these simple example steps.
 - Alternatively, you can quickly test this linter by running `censor lib/good_test.css` and/or `censor lib/bad_test.css`.
 -  If you happen to be in the bin folder, run `./censor ../lib/good_test.css` and/or `./censor ../lib/bad_test.css`.
 
+- If all else fails, `ruby bin/censor lib/good_test.css` will do the trick! 😉
+
 ## Good and Bad Code Examples
 ##### Good Code
 ```
