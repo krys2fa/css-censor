@@ -9,6 +9,13 @@ This is a CSS lint tool built as a Microverse Ruby capstone project.
 
 [Video Presentation](https://www.loom.com/share/6b13a2f8b35446bb957563af21bd3d4)
 
+## Screenshots
+### Screenshot of linter passing with no errors
+![screenshot](./images/linter_successful_pass.png) 
+
+### Screenshot of linter displaying errors
+![screenshot](./images/linter_unsuccessful_pass.png)
+
 ## Getting Started
 
 **Click on the link above in order to see the Live Demo of this project.**
