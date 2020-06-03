@@ -16,8 +16,8 @@ puts ''
 errors = Checker.check(file)
 
 if errors.size.positive?
-  puts "Checks completed with the following #{errors.size} errors: "
+  puts "1 file tested. Checks completed with the following #{errors.size} errors: "
   errors.each { |error| puts '  Error: '.red + "#{error}\n" }
 else
-  puts 'Checks completed with no errors'.green
+  puts '1 file tested. All checks completed with no errors'.green
 end

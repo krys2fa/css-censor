@@ -47,7 +47,8 @@ To get a local copy up and running follow these simple example steps.
 - If all else fails, `ruby bin/censor lib/good_test.css` will do the trick! 😉
 
 ## Good and Bad Code Examples
-##### Good Code
+##### Good Code Example
+Here is an example of good code with correct usage of syntax, spaces and indentation.
 ```
 .section {
   height: 2rem;
@@ -55,7 +56,8 @@ To get a local copy up and running follow these simple example steps.
 }
 ```
 
-##### Bad Code
+##### Bad Code Example
+Here is an example of poorly written code with incorrect usage of syntax, spaces and indentation.
 ```
 .section{
     height: 2rem
