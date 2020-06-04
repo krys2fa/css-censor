@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+require_relative '../lib/censor.rb'
+require_relative '../lib/checker.rb'
+require 'colorize'
+
+puts '---------------------------------'
+puts '| Welcome to Censor CSS Linter! |'
+puts '---------------------------------'
+puts ''
+puts 'Reading file...'
+puts ''
+file = ARGV[0]
+puts 'Scanning file for possible errors...'
+puts ''
+
+errors = Checker.check(file)
+
+if errors.size.positive?
+  puts "1 file tested. Checks completed with the following #{errors.size} errors: "
+  errors.each { |error| puts '  Error: '.red + "#{error}\n" }
+else
+  puts '1 file tested. All checks completed with no errors'.green
+end
