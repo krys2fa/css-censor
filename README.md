@@ -2,9 +2,9 @@
 This is a CSS lint tool built as a Microverse Ruby capstone project.
 
 ## Built With
-- Ruby
+- Ruby (Version 2.7.0)
 - Colorize gem
-- RSpec
+- RSpec gem
 - GitFlow
 
 ## Description
